@@ -1,0 +1,157 @@
+<nav class="bg-light">
+  <div class="nav-container pt-3 pb-2 container-lg">
+    <!-- logo and hamburger icon -->
+    <div class="logo-container">
+      <a href=""
+        ><img
+          src="../../assets/images/logo.svg"
+          alt="logo"
+          class="img-fluid d-block me-auto"
+      /></a>
+      <button class="h1 bg-transparent border-0" (click)="pannelToggle()">
+        <i class="bi bi-list"></i>
+      </button>
+    </div>
+    <!-- navigation links and buttons -->
+    <div class="links-container">
+      <!-- drop down menu 1 -->
+      <div class="dropdown-container">
+        <a (click)="featuresToggle()" role="button"
+          >Features
+          <span
+            ><img
+              src="../../assets/images/icon-arrow-down.svg"
+              [ngClass]="featureChevron ? 'chevron-rotate' : 'chevron'"
+              alt="" /></span
+        ></a>
+        <div
+          (mouseleave)="featuresToggle()"
+          [ngClass]="featureChevron ? 'dropdown-active' : ''"
+          class="dropdown-content card shadow"
+        >
+          <a href="" class="mb-2"
+            ><img src="../../assets/images/icon-todo.svg" alt="" /> Todo List</a
+          >
+          <a href="" class="mb-2"
+            ><img src="../../assets/images/icon-calendar.svg" alt="" />
+            Calender</a
+          >
+          <a href="" class="mb-2"
+            ><img src="../../assets/images/icon-reminders.svg" alt="" />
+            Reminder</a
+          >
+          <a href="" class="mb-2"
+            ><img src="../../assets/images/icon-planning.svg" alt="" />
+            Planing</a
+          >
+        </div>
+      </div>
+      <!-- dropdown menu 2 -->
+      <div class="dropdown-container">
+        <a (click)="companyToggle()" role="button"
+          >Company
+          <span
+            ><img
+              src="../../assets/images/icon-arrow-down.svg"
+              [ngClass]="companyChevron ? 'chevron-rotate' : 'chevron'"
+              alt="" /></span
+        ></a>
+        <div
+          (mouseleave)="companyToggle()"
+          [ngClass]="companyChevron ? 'dropdown-active' : ''"
+          class="dropdown-content card shadow"
+          style="left: 20px"
+        >
+          <a href="" class="mb-2">History</a>
+          <a href="" class="mb-2" style="width: max-content">Our Team</a>
+          <a href="" class="mb-2">Blog</a>
+        </div>
+      </div>
+      <a href="">Career</a>
+      <a href="">About</a>
+    </div>
+    <div class="button-container">
+      <button class="btn-login btn">Login</button>
+      <button class="btn-register btn btn-outline-dark">Register</button>
+    </div>
+
+    <!-- side pannel navigation -->
+    <div
+      class="side-pannel-container"
+      [ngClass]="isShowPannel ? 'show-pannel' : ''"
+    >
+      <!-- side pannel on smaller devices -->
+      <div
+        class="side-pannel card"
+        [ngClass]="isShowPannel ? 'show-side-pannel' : ''"
+      >
+        <button class="h1 close-btn" (click)="pannelToggle()">
+          <i class="bi bi-x-lg"></i>
+        </button>
+        <div class="links-container-side">
+          <!-- dropdown menu 1 -->
+          <div class="dropdown-container-side">
+            <a role="button" (click)="featuresToggle()"
+              >Features
+              <span
+                ><img
+                  src="../../assets/images/icon-arrow-down.svg"
+                  [ngClass]="featureChevron ? 'chevron-rotate' : 'chevron'"
+                  alt="" /></span
+            ></a>
+            <div
+              [ngClass]="featureChevron ? 'dropdown-side-active' : ''"
+              class="dropdown-content-side"
+            >
+              <a href="" class="mb-3"
+                ><img src="../../assets/images/icon-todo.svg" alt="" /> Todo
+                List</a
+              >
+              <a href="" class="mb-3"
+                ><img src="../../assets/images/icon-calendar.svg" alt="" />
+                Calender</a
+              >
+              <a href="" class="mb-3"
+                ><img src="../../assets/images/icon-reminders.svg" alt="" />
+                Reminder</a
+              >
+              <a href="" class="mb-3"
+                ><img src="../../assets/images/icon-planning.svg" alt="" />
+                Planing</a
+              >
+            </div>
+          </div>
+          <!-- dropdown menu 2 -->
+          <div class="dropdown-container-side">
+            <a role="button" (click)="companyToggle()"
+              >Company
+              <span
+                ><img
+                  src="../../assets/images/icon-arrow-down.svg"
+                  [ngClass]="companyChevron ? 'chevron-rotate' : 'chevron'"
+                  alt="" /></span
+            ></a>
+            <div
+              [ngClass]="companyChevron ? 'dropdown-side-active2' : ''"
+              class="dropdown-content-side"
+            >
+              <a href="" class="mb-3">History</a>
+              <a href="" class="mb-3" style="width: max-content">Our Team</a>
+              <a href="" class="mb-3">Blog</a>
+            </div>
+          </div>
+          <a href="" style="margin-bottom: 1.8rem">Career</a>
+          <a href="" style="margin-bottom: 1rem">About</a>
+        </div>
+        <div class="button-container-side">
+          <button class="login-btn btn mb-3 fw-500" style="font-weight: 500">
+            Login
+          </button>
+          <button class="register-btn btn btn-outline-dark">Register</button>
+        </div>
+      </div>
+    </div>
+
+    <!--  -->
+  </div>
+</nav>
